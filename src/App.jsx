@@ -6,23 +6,27 @@ import { IoEyeSharp } from "react-icons/io5";
 const App = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const dataCaptureEmail = (e) => {
     setEmail(e.target.value);
   };
   const dataCapturePassword = (e) => {
     setPassword(e.target.value);
   };
-  console.log(email,password
-
-  )
-  console.log(email, password);
+  // console.log(email, password);
+  // console.log(email, password);
   const [showPassword, setShowPassword] = useState(false);
 
   const clickEyes = () => {
     setShowPassword(!showPassword);
   };
 
+  const clickSubmitForm = (e) => {
+    e.preventDefult();
+    console.log({ email, password });
+    setEmail("")
+    setPassword("")
+  };
   return (
     <div>
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -38,7 +42,7 @@ const App = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form action="#" method="POST" className="space-y-6">
+          <form onSubmit={clickSubmitForm} className="space-y-6">
             <div>
               <label
                 htmlFor="email"
