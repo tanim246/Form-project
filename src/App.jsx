@@ -67,7 +67,6 @@ const App = () => {
               className="mt-2 w-full px-4 py-2 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
             />
           </div>
-
           <div>
             <label
               htmlFor="password"
@@ -121,3 +120,5 @@ const App = () => {
 };
 
 export default App;
+
+// Done
